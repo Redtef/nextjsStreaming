@@ -28,7 +28,7 @@ function Thumbnail({ result }) {
           {movieName}
         </h2>
         <p className="flex items-center opacity-0 group-hover:opacity-100">
-          {movieType}·{firstAirDate}·
+          {movieType}·{firstAirDate}·{result.id}
           <ThumbUpIcon className=" h-5 mx-2" />
           {result.vote_count}
         </p>

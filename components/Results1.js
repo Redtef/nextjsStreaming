@@ -1,7 +1,6 @@
-import Thumbnail from "./Thumbnail";
+import Thumbnail1 from "./Thumbnail1";
 
-function Results({ results }) {
-  console.log(results);
+function Results1({ results }) {
   return (
     <div
       className=" 
@@ -15,10 +14,10 @@ function Results({ results }) {
         "
     >
       {results.map((result) => (
-        <Thumbnail key={result.id} result={result} />
+        <Thumbnail1 key={result.id} result={result} />
       ))}
     </div>
   );
 }
 
-export default Results;
+export default Results1;
