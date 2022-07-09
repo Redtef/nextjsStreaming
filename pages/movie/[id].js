@@ -12,8 +12,10 @@ function Movie({ movie, cast }) {
   let imageSrc = `${BASE_URL}${movie.backdrop_path}`;
   let posterSrc = `${BASE_URL}${movie.poster_path}`;
   let realeaseYear = moment(movie.release_date).format("YYYY");
-  function getRating() {}
 
+  let link =
+    "https://www.themoviedb.org/movie/338953-fantastic-beasts-the-secrets-of-dumbledore";
+  let link2 = "https://www.youtube.com/watch?v=5UPdRF5xpVM";
   return (
     <div>
       <Head>

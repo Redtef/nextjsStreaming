@@ -15,7 +15,11 @@ function Results({ results }) {
         "
     >
       {results.map((result) => (
-        <Thumbnail key={result.id} result={result} />
+        <Thumbnail
+          onClick={() => console.log(result.id)}
+          key={result.id}
+          result={result}
+        />
       ))}
     </div>
   );

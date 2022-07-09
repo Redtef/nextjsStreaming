@@ -1,7 +1,9 @@
 import Image from "next/image";
 import { ThumbUpIcon } from "@heroicons/react/outline";
+import { useRouter } from "next/router";
 function Thumbnail({ result }) {
   const BASE_URL = "https://image.tmdb.org/t/p/original/";
+  const router = useRouter();
 
   let imageSrc =
     `${BASE_URL}${result.backdrop_path || result.poster_path}` ||
@@ -14,7 +16,10 @@ function Thumbnail({ result }) {
   let firstAirDate = airDate ? airDate : " ";
 
   return (
-    <div className=" p-2 group cursor-pointer transition duration-200 ease-in sm:hover:scale-105 hover:z-50">
+    <div
+      onClick={() => router.push(`/movie/${result.id}`)}
+      className=" p-2 group cursor-pointer transition duration-200 ease-in sm:hover:scale-105 hover:z-50"
+    >
       <Image
         layout="responsive"
         height={1080}
